@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yurii.Controller">
+   <children>
+      <VBox alignment="CENTER" layoutX="250.0" layoutY="150.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Label text="Country">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField id="textField" fx:id="addCountryField" maxWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="36.0" prefWidth="300.0" spacing="20.0">
+               <children>
+                  <Button id="button" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#addCountryQuery" text="Add" />
+                  <Button id="button" fx:id="addCountryBack" minWidth="60.0" mnemonicParsing="false" onAction="#addCountryCancel" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

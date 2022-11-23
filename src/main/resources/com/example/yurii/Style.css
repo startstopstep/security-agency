@@ -1,0 +1,47 @@
+#button {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
+#button:hover {
+    -fx-background-color: rgba(208, 208, 208, 0.71);
+    -fx-text-fill: #ffffff;
+}
+
+#anchorPane {
+    -fx-background-image: url(background.jpg);
+    -fx-background-size: 900, 800;
+}
+
+#loginVbox {
+    -fx-background-color: rgba(168, 168, 168, 0.9);
+    -fx-background-radius: 7px;
+}
+
+#textField {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
+#registerAnchor {
+    -fx-background-color: rgba(168, 168, 168, 0.9);
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 15, 0, 0, 0);
+}
+
+#TopHBox {
+    -fx-background-color: rgba(168, 168, 168, 0.9);
+}
+
+#tabs {
+    -fx-background-color: #ffffff;
+    -fx-border-width: 1px;
+    -fx-border-color: #a8a7a7;
+    -fx-border-radius: 2px;
+}
+
+#tabs:selected {
+    -fx-background-color: rgba(182, 182, 182, 0.89);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+    -fx-effect: innershadow(three-pass-box, rgba(0, 255, 10, 0.57), 1, 0, 0, 0);
+}

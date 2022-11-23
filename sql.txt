@@ -1,0 +1,64 @@
+create database securityAgency;
+use securityAgency;
+create table users
+(
+    id       integer     not null unique auto_increment primary key,
+    login    varchar(10) not null,
+    password varchar(10) not null,
+    name     varchar(60),
+    surname  varchar(60),
+    email    varchar(60),
+    agency    varchar(60)
+);
+
+insert into users(login, password, name, surname, email, agency)
+VALUES ('admin', 'admin', 'Yurii', 'Merker', 'admin@example.com', '0999999999');
+
+create table head
+(
+    id_head integer not null unique auto_increment primary key,
+    head    varchar(30),
+    email   varchar(30)
+);
+
+create table Customer
+(
+    id_customer integer not null unique auto_increment primary key,
+    customer    varchar(30)
+);
+
+create table employee
+(
+    id_employee integer not null unique auto_increment primary key,
+    employee    varchar(30)
+);
+
+create table office
+(
+    id_office integer not null unique auto_increment primary key,
+    city      varchar(30),
+    address   varchar(40)
+);
+
+create table country
+(
+    id_country integer not null unique auto_increment primary key,
+    country    varchar(30)
+);
+
+create table agency
+(
+    id_agency   integer not null unique auto_increment primary key,
+    id_head     integer,
+    foreign key (id_head) references head (id_head),
+    id_customer integer,
+    foreign key (id_customer) references customer (id_customer),
+    id_employee integer,
+    foreign key (id_employee) references employee (id_employee),
+    id_country  integer,
+    foreign key (id_country) references country (id_country),
+    name        varchar(4),
+    website     varchar(4),
+    id_office   integer,
+    foreign key (id_office) references office (id_office)
+);
